@@ -59,7 +59,6 @@ class InteractiveRecord
         column_name
       end
     end
-    binding.pry
     sql = "SELECT * FROM #{table_name} WHERE '#{column_names}' = '#{attribute}'"
     DB[:conn].execute(sql)
   end
