@@ -54,11 +54,7 @@ class InteractiveRecord
   end
 
   def self.find_by(attribute)
-    my_column = self.column_names.collect do |column_name|
-      if '#{attribute}' == column_name
-        column_name
-      end
-    end
+    
 #    sql = "SELECT * FROM #{table_name} WHERE '#{column_names}' = '#{attribute}'"
 #    DB[:conn].execute(sql)
   end
