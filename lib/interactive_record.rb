@@ -52,8 +52,9 @@ class InteractiveRecord
   end
 
   def self.find_by(attribute)
-    self.column_names.collect do |column_name|
+    my_column = self.column_names.collect do |column_name|
       attribute = column_name
+    end
 
     column_name =
     sql = "SELECT * FROM #{table_name} WHERE '#{column_names}' = '#{attribute}'"
